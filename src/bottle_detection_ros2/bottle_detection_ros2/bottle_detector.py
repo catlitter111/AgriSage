@@ -8,7 +8,7 @@
 import cv2
 import numpy as np
 import logging
-from rknn.api import RKNN
+from rknnlite.api import RKNN
 
 # 配置日志
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
@@ -54,7 +54,7 @@ class BottleDetector:
                 return False
                 
             # 初始化运行时环境
-            if self.rknn.init_runtime(target='rk3588', device_id=0) != 0:
+            if self.rknn.init_runtime() != 0:
                 logger.error('初始化运行时环境失败!')
                 return False
                 

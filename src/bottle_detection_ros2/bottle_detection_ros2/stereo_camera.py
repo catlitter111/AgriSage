@@ -20,7 +20,7 @@ MIN_VALID_DISTANCE = 0.2  # 最小有效距离（米）
 MAX_VALID_DISTANCE = 5.0  # 最大有效距离（米）
 
 class StereoCamera:
-    def __init__(self, camera_id=21, width=1280, height=480):
+    def __init__(self, camera_id=1, width=1280, height=480):
         """
         初始化双目相机
         

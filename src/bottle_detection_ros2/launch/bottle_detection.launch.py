@@ -20,7 +20,7 @@ def generate_launch_description():
     camera_id = LaunchConfiguration('camera_id')
     camera_id_arg = DeclareLaunchArgument(
         'camera_id',
-        default_value='21',
+        default_value='1',
         description='相机设备ID'
     )
     

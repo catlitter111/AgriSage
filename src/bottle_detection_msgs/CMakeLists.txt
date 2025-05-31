@@ -1,4 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
+set(PYTHON_EXECUTABLE /usr/bin/python3)
 project(bottle_detection_msgs)
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")

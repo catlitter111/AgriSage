@@ -1,5 +1,4 @@
 cmake_minimum_required(VERSION 3.8)
-set(PYTHON_EXECUTABLE /usr/bin/python3)
 project(bottle_detection_msgs)
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
@@ -16,5 +15,14 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/BottleDetection.msg"
   DEPENDENCIES std_msgs
 )
+
+# 导出依赖项
+ament_export_dependencies(rosidl_default_runtime)
+
+# 测试配置
+if(BUILD_TESTING)
+  find_package(ament_lint_auto REQUIRED)
+  ament_lint_auto_find_test_dependencies()
+endif()
 
 ament_package()

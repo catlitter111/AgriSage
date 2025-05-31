@@ -8,7 +8,7 @@
 import cv2
 import numpy as np
 import logging
-from rknnlite.api import RKNN
+from rknnlite.api import RKNNLite
 
 # 配置日志
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
@@ -48,7 +48,7 @@ class BottleDetector:
     def load_model(self):
         """加载RKNN模型"""
         try:
-            self.rknn = RKNN()
+            self.rknn = RKNNLite()
             if self.rknn.load_rknn(self.model_path) != 0:
                 logger.error('加载RKNN模型失败')
                 return False

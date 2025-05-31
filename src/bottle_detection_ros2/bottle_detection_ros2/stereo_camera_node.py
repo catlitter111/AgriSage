@@ -24,7 +24,7 @@ class StereoCameraNode(Node):
         super().__init__('stereo_camera_node')
         
         # 声明参数
-        self.declare_parameter('camera_id', 21)
+        self.declare_parameter('camera_id', 1)
         self.declare_parameter('width', 1280)
         self.declare_parameter('height', 480)
         self.declare_parameter('frame_rate', 15.0)
